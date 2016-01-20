@@ -16,10 +16,10 @@ var customerName;
 
 Till.prototype.inputOrderName = function(customerName){
   this.orderName.push(customerName);
-  return this.orderName[0];
 }
 
 Till.prototype.inputOrder = function(item, quantity){
-  this.order.push(item.quantity)
-
+  var basket = {};
+  basket[item] = quantity;
+  this.order.push(basket);
 }

@@ -1,3 +1,5 @@
+'use strict';
+
 describe ('till',function(){
 
   var till;
@@ -6,8 +8,7 @@ describe ('till',function(){
     till = new Till();
   })
 
-
-  it('has a shope name',function(){
+  it('has a shop name',function(){
     expect(till.shopName).toEqual("The Coffee Connection");
   });
 
@@ -29,7 +30,7 @@ describe ('till',function(){
   });
 
   it('takes an order of item and quantity',function(){
-    till.inputOrder(quantity, item);
-    expect(till.order).toEqual([{quantity, item}]);
+    till.inputOrder("Tea", 2);
+    expect(till.order).toEqual([{Tea:2}]);
   });
 })
